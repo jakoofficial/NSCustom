@@ -22,6 +22,36 @@ namespace CustomNS
         }
 
         /// <summary>
+        /// Change the color in a string
+        /// </summary>
+        /// <param name="text">The text to show</param>
+        /// <param name="left">Start left position of text</param>
+        /// <param name="top">Start top position of text</param>
+        /// <param name="colorStartPos">The start position for color</param>
+        /// <param name="colorEndPos">End position of color</param>
+        /// <param name="startColor">The main color for the line</param>
+        /// <param name="newColor">The new color for part of string</param>
+        public static void WriteAtPos(string text, int left, int top, int colorStartPos, int colorEndPos, ConsoleColor startColor, ConsoleColor newColor)
+        {
+            char[] chars = text.ToCharArray();
+            int numb = 0;
+            Console.SetCursorPosition(left, top);
+            foreach (var c in chars)
+            {
+                Console.ForegroundColor = startColor;
+                if (numb >= colorStartPos && numb < colorEndPos)
+                {
+                    Console.ForegroundColor = newColor;
+                }
+                Console.Write(chars[numb]);
+                numb++;
+            }
+
+            //Console.WriteLine(txt);
+            Console.ResetColor();
+        }
+
+        /// <summary>
         /// Used to set a multiline text string in a specific position in the console with an orientation
         /// </summary>
         /// <param name="text">The text to show</param>
@@ -131,6 +161,17 @@ namespace CustomNS
                 }
                 sTop++;
             }
+        }
+
+        public static bool InputCheck(string input, string expected)
+        {
+            bool result = false;
+            if (true)
+            {
+
+            }
+
+            return result;
         }
     }
 }
