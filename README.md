@@ -10,7 +10,7 @@ Currently the custom methods included are:
   - This method has 2 overrides.
 
 # How to get NSCustom
-1. Download the CustomNS.cs file or folder and add it to your console project.
+1. Download the CustomNS.cs file or folder under the NSCustom folder and add it to your console project.
 2. Add "using CustomNS" together with the rest of the using elements.
 3. To use write cText."Method to use"
 
