@@ -152,7 +152,7 @@ namespace CustomNS
         /// <param name="eTop">End top position</param>
         public static void ClearConsAt(int sLeft, int sTop, int eLeft, int eTop)
         {
-            while (sTop != eTop)
+            while (sTop != eTop && sTop < eTop && sLeft < eLeft)
             {
                 Console.SetCursorPosition(sLeft, sTop);
                 for (int i = sLeft; i <= eLeft; i++)
@@ -160,6 +160,12 @@ namespace CustomNS
                     Console.Write(" ");
                 }
                 sTop++;
+            }
+            if (sTop > eTop || sLeft > eLeft)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nsTop might be higher than eTop\n" +
+                                  "sLeft might be higher than eLeft");
             }
         }
 

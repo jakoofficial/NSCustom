@@ -16,14 +16,29 @@
 //    cText.WriteAtPos("Test", 10, 9 + i);
 //}
 
-if (cText.InputCheck("Am i a human?", 'Y'))
-{
-    Console.WriteLine("\nWOOOOOOOO!");
-}
+//if (cText.InputCheck("Am i a human?", 'Y'))
+//{
+//    Console.WriteLine("\nWOOOOOOOO!");
+//}
 
 //if (cText.InputCheck("\nAm i a human?", "Yes"))
 //{
 //    Console.WriteLine("WOOOOOOOO!");
+//}
+
+cText.WriteAtPos("hej", 5, 5);
+if (cText.InputCheck("hej", 'y'))
+{
+    cText.ClearConsAt(0, 0, 10, 10);
+}
+
+//Console.CursorVisible = false;
+//string move = "[__]";
+//for (int i = 0; i < 40; i++)
+//{
+//    cText.WriteAtPos(move, i, 5);
+//    Thread.Sleep(100);
+//    cText.ClearConsAt(0,4, 38, 6);
 //}
 
 cText.WriteAtPos("Press any key to continue", 0, 25);
