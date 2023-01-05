@@ -8,3 +8,10 @@ Currently the custom methods included are:
 - ClearConsAt | used for clearing portions of the console, without the use of the clear command.
 - InputCheck | used for checking either a string or a character and returns a boolean.
   - This method has 2 overrides.
+
+# How to get NSCustom
+1. Download the CustomNS.cs file or folder and add it to your console project.
+2. Add "using CustomNS" together with the rest of the using elements.
+3. To use write cText."Method to use"
+
+Enjoy.
