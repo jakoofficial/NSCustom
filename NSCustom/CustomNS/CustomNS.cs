@@ -163,15 +163,33 @@ namespace CustomNS
             }
         }
 
-        public static bool InputCheck(string input, string expected)
+        /// <summary>
+        /// Makes the user write a text string and gets true/false in return depending on the expected result
+        /// </summary>
+        /// <param name="textToShow">The text before the quesiton</param>
+        /// <param name="expected">the expected input</param>
+        /// <returns>Boolean</returns>
+        public static bool InputCheck(string textToShow, string expected)
         {
-            bool result = false;
-            if (true)
-            {
-
-            }
-
-            return result;
+            Console.WriteLine(textToShow);
+            if (Console.ReadLine().ToLower() == expected.ToLower())
+                return true;
+            else
+                return false;
+        }
+        /// <summary>
+        /// Makes the user press a key and gets true/false in return depending on the expected char result
+        /// </summary>
+        /// <param name="textToShow">The text before the quesiton</param>
+        /// <param name="expected">the expected input</param>
+        /// <returns>Boolean</returns>
+        public static bool InputCheck(string textToShow, char expected)
+        {
+            Console.WriteLine(textToShow);
+            if (Console.ReadKey().KeyChar.ToString().ToLower() == expected.ToString().ToLower())
+                return true;
+            else
+                return false;
         }
     }
 }

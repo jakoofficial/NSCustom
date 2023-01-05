@@ -1,13 +1,13 @@
 ﻿using CustomNS;
 
-cText.WriteAtPos("""
-    Welcome and thanks for using CustomNS by Jako.
-    This is a small collection of userfriendly
-    methods designed to make programming in C#
-    easier.
-    """, 10, 0, "centered", ConsoleColor.Green);
+//cText.WriteAtPos("""
+//    Welcome and thanks for using CustomNS by Jako.
+//    This is a small collection of userfriendly
+//    methods designed to make programming in C#
+//    easier.
+//    """, 10, 0, "centered", ConsoleColor.Green);
 
-cText.WriteAtPos("Danmark er et land", 0, 10, 8, 14, ConsoleColor.Red, ConsoleColor.White);
+//cText.WriteAtPos("Danmark er et land", 0, 10, 8, 14, ConsoleColor.Red, ConsoleColor.White);
 
 //for (int i = 0; i < 10; i++)
 //{ //
@@ -16,6 +16,15 @@ cText.WriteAtPos("Danmark er et land", 0, 10, 8, 14, ConsoleColor.Red, ConsoleCo
 //    cText.WriteAtPos("Test", 10, 9 + i);
 //}
 
+if (cText.InputCheck("Am i a human?", 'Y'))
+{
+    Console.WriteLine("\nWOOOOOOOO!");
+}
 
-cText.WriteAtPos("Press any key to continue", 0, 6);
+//if (cText.InputCheck("\nAm i a human?", "Yes"))
+//{
+//    Console.WriteLine("WOOOOOOOO!");
+//}
+
+cText.WriteAtPos("Press any key to continue", 0, 25);
 Console.ReadKey();
