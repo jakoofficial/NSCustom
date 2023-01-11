@@ -1,11 +1,11 @@
 ﻿using CustomNS;
 
-//cText.WriteAtPos("""
-//    Welcome and thanks for using CustomNS by Jako.
-//    This is a small collection of userfriendly
-//    methods designed to make programming in C#
-//    easier.
-//    """, 10, 0, "centered", ConsoleColor.Green);
+cText.WriteAtPos("""
+    Welcome and thanks for using CustomNS by Jako.
+    This is a small collection of userfriendly
+    methods designed to make programming in C#
+    easier.
+    """, 10, 0, "centered", ConsoleColor.Green);
 
 //cText.WriteAtPos("Danmark er et land", 0, 10, 8, 14, ConsoleColor.Red, ConsoleColor.White);
 
@@ -26,11 +26,18 @@
 //    Console.WriteLine("WOOOOOOOO!");
 //}
 
-cText.WriteAtPos("hej", 5, 5);
-if (cText.InputCheck("hej", 'y'))
-{
-    cText.ClearConsAt(0, 0, 10, 10);
-}
+//cText.WriteAtPos("hej", 5, 5);
+//if (cText.InputCheck("hej", 'y'))
+//{
+//    cText.ClearConsAt(0, 0, 10, 10);
+//}
+
+//string str = "I used to like cake now i cake only eat pizza";
+//Console.WriteLine(cText.RemoveWord(str,
+//                                   "cake"));
+//Console.WriteLine(cText.ReplaceWord(str,
+//                                   "cake", "buns"));
+//Console.WriteLine(cText.RemoveStringPart(str, 5, 23));
 
 //Console.CursorVisible = false;
 //string move = "[__]";

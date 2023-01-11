@@ -8,7 +8,8 @@ namespace CustomNS
 {
     public static class cText
     {
-        //*  *//
+        //* Custom functions *//
+        #region WriteAtPos
         /// <summary>
         /// Used to set a text string in a specific position in the console
         /// </summary>
@@ -122,9 +123,7 @@ namespace CustomNS
                 Console.Write(stringArr[lineNumb]);
                 lineNumb++;
             }
-
-            //Console.SetCursorPosition((int)left, top);
-            //Console.WriteLine(text);
+            Console.ResetColor();
         }
 
         /// <summary>
@@ -142,6 +141,7 @@ namespace CustomNS
             Console.ForegroundColor = color;
             Console.WriteLine(text);
         }
+        #endregion
 
         /// <summary>
         /// Clear the console at a position
@@ -169,6 +169,7 @@ namespace CustomNS
             }
         }
 
+        #region InputCheck
         /// <summary>
         /// Makes the user write a text string and gets true/false in return depending on the expected result
         /// </summary>
@@ -197,5 +198,100 @@ namespace CustomNS
             else
                 return false;
         }
+        /// <summary>
+        /// Makes the user input an integer and gets true/false in return depending on the expected integer result
+        /// </summary>
+        /// <param name="textToShow">The text before the quesiton</param>
+        /// <param name="expected">the expected input</param>
+        /// <returns>Boolean</returns>
+        public static bool InputCheck(string textToShow, int expected)
+        {
+            Console.WriteLine(textToShow);
+            int i;
+            int.TryParse(Console.ReadLine(), out i);
+            if (i == expected)
+                return true;
+            else
+                return false;
+
+        }
+        #endregion
+
+        #region String Extras
+        /// <summary>
+        /// Removes a part of a string at the start and end positions given by their respective integers
+        /// </summary>
+        /// <param name="strToChange">The string to change</param>
+        /// <param name="removeStart">The start position for removal in the string</param>
+        /// <param name="removeEnd">The end position for removal in the string</param>
+        /// <returns>string</returns>
+        public static string RemoveStringPart(string strToChange, int removeStart, int removeEnd)
+        {
+            char[] chars = strToChange.ToCharArray();
+            string newStr = "";
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (!(i >= removeStart && i < removeEnd))
+                {
+                    newStr += chars[i];
+                }
+            }
+
+            return newStr;
+        }
+        /// <summary>
+        /// Removes a chosen word from a string everytime it is used
+        /// </summary>
+        /// <param name="strToChange">The string where the word can be found</param>
+        /// <param name="wordToRemove">The word to remove</param>
+        /// False: Removes every instance of the word.
+        /// </param>
+        /// <returns>string</returns>
+        public static string RemoveWord(string strToChange, string wordToRemove)
+        {
+            string[] strArr = strToChange.Split(' ');
+            string newStr = "";
+
+            foreach (var w in strArr)
+            {
+                if (w.ToLower() != wordToRemove.ToLower())
+                    newStr += w + " ";
+            }
+
+            return newStr;
+        }
+
+        /// <summary>
+        /// Replaces a word from a string with a new word (Needs to be surrounded by a space on both sides to work)
+        /// </summary>
+        /// <param name="str">The string</param>
+        /// <param name="wordToReplace">The word you want to replace</param>
+        /// <param name="replacement">The replacement word</param>
+        /// <returns></returns>
+        public static string ReplaceWord(string str, string wordToReplace, string replacement)
+        {
+            string[] strArr = str.Split(' ');
+            string newStr = "";
+
+            foreach (var w in strArr)
+            {
+                if (w.ToLower() == wordToReplace.ToLower())
+                {
+                    newStr += replacement + " ";
+                }
+                else newStr += w + " ";
+            }
+
+            return newStr;
+        }
+        
+        //Move string on screen
+        public static string MoveStringX(string strToMove, int distance)
+        {
+
+
+            return "";
+        }
+        #endregion
     }
 }
