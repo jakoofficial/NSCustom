@@ -284,9 +284,34 @@ namespace CustomNS
 
             return newStr;
         }
-        
-        //Move string on screen
-        public static string MoveStringX(string strToMove, int distance)
+
+        /// <summary>
+        /// Moves the string along the x-axis to the desired distance and speed
+        /// </summary>
+        /// <param name="strToMove">The string</param>
+        /// <param name="speed">The speed used to move the string</param>
+        /// <param name="startXPos">The start point for the string</param>
+        /// <param name="yPos">The Y point for the string</param>
+        /// <param name="distance">The amount the string needs to move</param>
+        /// <returns></returns>
+        public static string MoveStringX(string strToMove, int speed, int startXPos, int yPos, int distance)
+        {
+            Console.SetCursorPosition(startXPos, yPos);
+            for (int i = 0; i < distance; i++)
+            {
+
+            }
+
+            return "";
+        }
+        /// <summary>
+        /// Moves the string along the y-axis to the desired distance and speed
+        /// </summary>
+        /// <param name="strToMove">The string</param>
+        /// <param name="speed">The speed used to move the string</param>
+        /// <param name="yPos">The end point for the string</param>
+        /// <returns></returns>
+        public static string MoveStringY(string strToMove, int speed, int yPos)
         {
 
 
